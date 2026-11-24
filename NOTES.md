@@ -1,8 +1,8 @@
 # NOTES: Tatkal Trainer (System Design, Visualized #1)
 
 Model credit: Built with Claude Opus 5.5
-Live: <pending deploy>
-Repo: <pending push>
+Live: https://tatkal-trainer.prayushkale.workers.dev
+Repo: https://github.com/prayushkale/tatkal-trainer
 DEMO_SEED: 5 (at +300 ms: `WL 1086`, blame `bucket`; note below on why `WL 347` + `blame=bucket` is mathematically unreachable at 1,500 req/s and burst 375)
 
 ## What failed (prompt or model → what broke → fix that worked)
@@ -98,7 +98,11 @@ Note on `skip_locked --limit on`: single-process uvicorn processed ~315 req/s lo
 
 ### Verification summaries
 
-(pending step 20 / §6)
+- `web` unit tests (`npm run test:unit -- --run`): `Test Files 5 passed (5) · Tests 23 passed (23)`
+- `web` type-check / lint / build: `vue-tsc --build` 0 errors, `oxlint` 0 errors / 0 warnings, `eslint` 0 errors, `vite build` clean (143 ms)
+- `web` E2E (`npm run test:e2e`): `4 passed (12.4s)` (race flow + 1280x800 & 390x844 screenshots + 1200x630 `og.png`)
+- `lab` pytest (`pytest -q`): `5 passed, 1 xfailed in 0.75s` (3 Redis bucket tests + `for_update` + `skip_locked` passing; `naive` strict xfail)
+- Live deploy E2E (`BASE_URL=https://tatkal-trainer.prayushkale.workers.dev npx playwright test e2e/race.spec.ts`): `1 passed (3.6s)` + `og.png` HTTP 200 OK
 
 ## Thread draft inputs
 - Hook: "Tatkal opens at 10:00:00 and is gone by 10:00:03. So I built a trainer where you can practise losing, and see which part of the system rejected you."

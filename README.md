@@ -2,7 +2,7 @@
 
 Race 50,000 bots to a Tatkal ticket, then see which part of a toy backend rejected you.
 
-Live: (pending deploy)
+Live: https://tatkal-trainer.prayushkale.workers.dev
 
 ## Run the game (`web/`)
 
