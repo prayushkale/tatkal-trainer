@@ -21,7 +21,7 @@ DEMO_SEED: <seed> (WL 347 window: +___ to +___ ms)
 
 ### Perf: runRace default wall time
 
-(pending step 6)
+- `runRace(DEFAULTS, 1, 300)` on Apple Silicon Mac (Node v26.13.1 via tsx): **35.13 ms** cold, **35.88 ms** warm (target: < 100 ms).
 
 ### Verification summaries
 
