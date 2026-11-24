@@ -1,0 +1,55 @@
+:root {
+  /* Booking world */
+  --book-page: #E9E4D6;
+  --book-panel: #F7F4EC;
+  --book-header: #1E3A66;
+  --book-header-text: #FFFFFF;
+  --book-rule: #9AA7B8;
+  --book-text: #1B1B1B;
+  --book-muted: #555A60;
+  --book-cta: #E8731A;
+  --book-cta-hover: #C95F0F;
+  --book-disabled: #BDB8AC;
+  --book-bevel: #D4D0C8;
+
+  /* LED clock */
+  --led-bg: #0A0A0A;
+  --led-lit: #FF3B30;
+  --led-unlit: #2A0A08;
+
+  /* Backend world */
+  --ops-bg: #0E1318;
+  --ops-node-stroke: #3A4A5A;
+  --ops-node-fill: #161E26;
+  --ops-text: #C9D4DF;
+  --ops-muted: #8294A6;
+  --ops-pass: #2ECC71;
+  --ops-wait: #F5A623;
+  --ops-reject: #FF4D4F;
+  --ops-you: #FFD400;
+
+  /* Result stamps */
+  --stamp-cnf: #1E8E3E;
+  --stamp-bad: #C62828;
+
+  /* Typography */
+  --font-book: Verdana, Tahoma, Geneva, sans-serif;
+  --font-mono: ui-monospace, Menlo, Consolas, monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--book-page);
+  color: var(--book-text);
+  font-family: var(--font-book);
+  font-size: 13px;
+  line-height: 1.4;
+}

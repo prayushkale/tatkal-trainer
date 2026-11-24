@@ -1,0 +1,55 @@
+/* Booking world (2000s government web form) */
+.retro-btn {
+  background: var(--book-bevel);
+  color: var(--book-text);
+  border: 2px outset #F0ECE3;
+  border-radius: 1px;
+  padding: 5px 12px;
+  font-family: var(--font-book);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.retro-btn:hover:not(:disabled) {
+  background: #DFDCD4;
+}
+
+.retro-btn:active:not(:disabled) {
+  border-style: inset;
+}
+
+.retro-btn:focus-visible {
+  outline: 2px solid var(--book-header);
+  outline-offset: 2px;
+}
+
+.retro-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 11px;
+  background: #FFFFFF;
+}
+
+.retro-table th,
+.retro-table td {
+  border: 1px solid var(--book-rule);
+  padding: 5px 7px;
+  text-align: left;
+}
+
+.retro-table th {
+  background: #E2E7EE;
+  color: var(--book-header);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.retro-header-band {
+  background: var(--book-header);
+  color: var(--book-header-text);
+  padding: 8px 12px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
