@@ -3,7 +3,7 @@ import type { SimConfig } from './types.ts'
 export const DEFAULTS: SimConfig = {
   bots: 50_000,
   seats: 128,
-  waitlistCap: 600,
+  waitlistCap: 1500,
   lbNodes: 4,
   lbMs: 2,
   rateLimitPerSec: 1500,
@@ -12,15 +12,15 @@ export const DEFAULTS: SimConfig = {
   queueTimeoutMs: 2500,
   workers: 8,
   serviceMs: 10,
-  fastShare: 0.6,
-  fastMeanMs: 80,
-  slowMeanMs: 1200,
+  fastShare: 0.85,
+  fastMeanMs: 14_000,
+  slowMeanMs: 150_000,
   botLatencyMinMs: 15,
   botLatencyMaxMs: 80,
   userLatencyMs: 90,
   maxRetries: 2,
-  retryBackoffMs: 250,
-  retryJitterMs: 250,
+  retryBackoffMs: 25,
+  retryJitterMs: 30,
 }
 
 export const SLIDERS = {
