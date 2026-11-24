@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.venv/
+__pycache__/
+.pytest_cache/
+.env*
+test-results/
+playwright-report/
+web/screens/
+recordings/
+.wrangler/
+.DS_Store
